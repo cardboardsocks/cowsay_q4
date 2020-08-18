@@ -14,9 +14,9 @@ def cowsaid(request):
             cow_process = subprocess.run(f'cowsay "{cowsays}"', capture_output=True, shell=True)
             cow_picture = cow_process.stdout.decode('utf-8')
             form = AddCowsay()
-            return render(request, 'index.html', {'cowsaid': cow_picture, 'form': form, "Welcome": "What does the cow say?"})
+            
     form = AddCowsay()
-    return render(request, "index.html", {"form": form, "Welcome": "What does the cow say?"})
+    return render(request, "index.html", {"form": form, "Welcome": "What would you like the cow to say?"})
 
 
 def cowsay_history(request):
