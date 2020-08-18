@@ -1,0 +1,8 @@
+<h1>{{ Welcome }}</h1>
+<a href="/history/">History</a>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <pre>{{cowsaid}}</pre>
+    <input type="submit" value="Submit">
+</form>
